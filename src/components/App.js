@@ -1,7 +1,18 @@
-import LoginForm from "./LoginForm";
+import { useEffect } from "react";
+import { connect } from "react-redux";
 
-function App() {
-  return <div><LoginForm/></div>;
+import LoginForm from "./LoginForm";
+import { handleInitialData } from "../actions/shared";
+
+function App(props) {
+
+  useEffect(() => {
+    props.dispatch(handleInitialData());
+  }, []);
+
+  return <div>
+    <LoginForm/>
+  </div>;
 }
 
-export default App;
+export default connect()(App);

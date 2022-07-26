@@ -1,7 +1,7 @@
 import { setAuthedUser } from "./authedUser";
 import { receiveUsers } from "./users";
 import { receiveQuestions } from "./questions";
-import { getInitialData } from "../utils/helper";
+import { getInitialData } from "../utils/helpers";
 
 
 export const handleInitialData = () => {
